@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    overflow: hidden;
+
+    background-color: black;
+    color: #cdcdcd;
+}
+
+/*
+.screen {
+    display: none;
+}
+
+.screen[active="true"] {
+    display: inline-block;
+}
+*/
+
+.loading,
+.game {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 480px;
+}
+
+.game > canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 480px;
+}

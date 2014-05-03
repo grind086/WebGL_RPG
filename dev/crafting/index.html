@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script src="constants.js"></script>
+
+    <script src="Item.js"></script>
+    <script src="item/mix/Ingredient.js"></script>
+    <script src="item/mix/Usable.js"></script>
+    <script src="item/mix/Equippable.js"></script>
+    <script src="item/mix/Weapon.js"></script>
+    <script src="item/mix/Armor.js"></script>
+    <script src="item/mix/Randomizer.js"></script>
+    <script src="item/mix/randomizer/RandItemProfile.js"></script>
+    <script src="item/mix/randomizer/RandItemType.js"></script>
+    <script src="item/mix/randomizer/Types.js"></script>
+
+    <script src="item/Root.js"></script>
+    <script src="item/Potion.js"></script>
+    <script src="item/IllysIntimidatingWood.js"></script>
+
+    <script src="Recipe.js"></script>
+</head>
+
+<body>
+    <script>
+        var root = new ItemRoot();
+        var potion = new ItemPotion();
+        var illy = new ItemIllysIntimidatingWood();
+        console.log(illy);
+        console.log(illy.stats);
+    </script>
+</body>
+</html>

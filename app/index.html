@@ -1,0 +1,40 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css.css" />
+    <script src="./js/constants.js"></script>
+    <script src="./js/lib/pixi.dev.js"></script>
+</head>
+
+<body onload="startup()">
+    <div class="game screen">
+        <canvas id="gameCanvas" width="640" height="480"></canvas>
+    </div>
+    <script type="text/javascript">
+        require('nw.gui').Window.get().showDevTools();
+
+        var helper = require('./js/helper.js');
+        var Vector = require('./js/Vector');
+        var Scenes = null;
+
+        var curScene = null;
+        var renderer = null;
+
+        function startup() {
+            var canvas = document.getElementById('gameCanvas');
+            renderer = PIXI.autoDetectRenderer(640, 480, canvas);
+
+            Scenes = require('./js/Scenes')(PIXI, renderer);
+            curScene = Scenes.map;
+
+            requestAnimFrame(update);
+        }
+
+        function update() {
+            curScene.update();
+            renderer.render(curScene.stage);
+
+            requestAnimFrame(update);
+        }
+    </script>
+</body>
+</html>

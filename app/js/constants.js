@@ -1,0 +1,12 @@
+DIR_N_DEG = 90;
+DIR_E_DEG = 180;
+DIR_S_DEG = 270;
+DIR_W_DEG = 0;
+
+DIR_N = 1;
+DIR_E = 2;
+DIR_S = 4;
+DIR_W = 8;
+
+DIR_NONE = 0;
+DIR_ALL = DIR_N & DIR_S & DIR_E & DIR_W;
